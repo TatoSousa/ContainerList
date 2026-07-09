@@ -4,11 +4,11 @@ This contents is exclusive for learning how to use especifics technologies, usin
 Before starts change the PostgreSQL values in docker-compose.yml.
 
 Avaiable Tools:
+- Apace NiFI
 - Grafana Server;
 - InfluxDB - Temporal database;
 - Metabase - BI Tools;
 - NGinX Portable;
-- Apace NiFI
 - PgAdmin;
 - Portainer - UI for docker
 
