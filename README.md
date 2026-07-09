@@ -12,11 +12,13 @@ Avaiable Tools:
 - PgAdmin;
 - Portainer - UI for docker
 
-## Docker commands:
-Start docker compose - **docker compose up -d**
-Stop docker compose - **docker compose down**
-Show logs - **docker logs [container_id]**
-List containers - **docker ps**
-Stop all containers - **docker stop $(docker ps -a -q)**
-Remove all containers (after stop) - **docker rm $(docker ps -a -q)**
-Remove all images - **docker rm -vf $(docker ps -aq) && docker rmi -f $(docker images -aq)**
+## Docker commands
+
+1. Start docker compose - **docker compose up -d**
+1. Stop docker compose - **docker compose down**
+1. Show logs - **docker logs [container_id]**
+1. List containers - **docker ps**
+1. Stop all containers - **docker stop $(docker ps -a -q)**
+1. Remove all containers (after stop) - **docker rm $(docker ps -a -q)**
+1. Remove all images - **docker rm -vf $(docker ps -aq) && docker rmi -f $(docker images -aq)**
+
