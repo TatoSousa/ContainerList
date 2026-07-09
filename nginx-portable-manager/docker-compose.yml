@@ -1,0 +1,11 @@
+services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'   # Porta HTTP pública
+      - '443:443' # Porta HTTPS pública
+      - '81:81'   # Porta do Painel de Controle Web
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt

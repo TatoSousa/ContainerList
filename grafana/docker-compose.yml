@@ -1,0 +1,19 @@
+services:
+  grafana:
+    image: grafana/grafana-enterprise:latest
+    container_name: grafana_server
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_DATABASE_TYPE=postgres
+      - GF_DATABASE_HOST=127.0.0.1:5432
+      - GF_DATABASE_NAME=grafana
+      - GF_DATABASE_USER=grafana_infra
+      - GF_DATABASE_PASSWORD=grafana_senha
+      - GF_DATABASE_SSL_MODE=disable
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+volumes:
+  grafana_data:

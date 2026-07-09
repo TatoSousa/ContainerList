@@ -1,0 +1,22 @@
+services:
+  nifi:
+    image: apache/nifi:2.5.0
+    container_name: nifi
+
+    ports:
+      - "8085:8080"
+
+    environment:
+      SINGLE_USER_CREDENTIALS_USERNAME: admin
+      SINGLE_USER_CREDENTIALS_PASSWORD: AdminAdmin@123
+      NIFI_WEB_HTTP_HOST: 0.0.0.0
+      NIFI_WEB_HTTP_PORT: 8080
+      TZ: America/Sao_Paulo
+
+    volumes:
+      - ./repositories/database_repository:/opt/nifi/database_repository
+      - ./repositories/flowfile_repository:/opt/nifi/flowfile_repository
+      - ./repositories/content_repository:/opt/nifi/content_repository
+      - ./repositories/provenance_repository:/opt/nifi/provenance_repository
+      - ./repositories/state:/opt/nifi/state
+
